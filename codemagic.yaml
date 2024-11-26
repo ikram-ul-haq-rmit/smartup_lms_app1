@@ -1,9 +1,9 @@
 workflows:
   android_emulator:
-    name: Android APK smartup_lms_app3 for Emulator
+    name: Android APK smartup_lms_app4 for Emulator
     environment:
       vars:
-        PROJECT_NAME: "Smartup_Lms_app3" # Replace with your project name
+        PROJECT_NAME: "Smartup_Lms_app4" # Replace with your project name
     scripts:
       - name: Clean NPM
         script: |
