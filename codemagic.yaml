@@ -3,7 +3,7 @@ workflows:
     name: Android APK smartup_lms_app1 for Emulator
     environment:
       vars:
-        PROJECT_NAME: "Smartup_Lms_app1" # Replace with your project name
+        PROJECT_NAME: "Smartup_Lms_app2" # Replace with your project name
     scripts:
       - name: Install dependencies
         script: |
