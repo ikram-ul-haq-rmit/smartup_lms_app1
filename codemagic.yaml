@@ -1,0 +1,24 @@
+workflows:
+  android_emulator:
+    name: Android APK smartup_lms_app1 for Emulator
+    environment:
+      vars:
+        PROJECT_NAME: "Smartup_Lms_app1" # Replace with your project name
+    scripts:
+      - name: Install dependencies
+        script: |
+          npm install
+      - name: Generate JavaScript bundle
+        script: |
+          npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+      - name: Build APK
+        script: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+    artifacts:
+      - android/app/build/outputs/apk/debug/app-debug.apk
+    publishing:
+      email:
+        recipients:
+          - "ikram.ul.haq@rmit.edu.au"
