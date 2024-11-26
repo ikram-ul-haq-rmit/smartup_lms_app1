@@ -1,12 +1,14 @@
 workflows:
   android_emulator:
-    name: Android APK smartup_lms_app2 for Emulator
+    name: Android APK smartup_lms_app3 for Emulator
     environment:
       vars:
-        PROJECT_NAME: "Smartup_Lms_app2" # Replace with your project name
+        PROJECT_NAME: "Smartup_Lms_app3" # Replace with your project name
     scripts:
       - name: Install dependencies
         script: |
+          rm -rf node_modules
+          npm cache clean --force
           npm install
       - name: Generate JavaScript bundle
         script: |
